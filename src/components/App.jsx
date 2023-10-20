@@ -18,7 +18,7 @@ export const App = () => {
       ...data,
       id: nanoid(),
     };
-    this.setState([contacts, newContact]);
+    setContacts([contacts, newContact]);
   };
 
 
