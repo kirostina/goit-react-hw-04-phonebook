@@ -43,11 +43,11 @@ export const App = () => {
     return (
       <div>
         <h1>Phonebook</h1>
-        <ContactForm createContact={this.createContact}/>
+        <ContactForm createContact={createContact}/>
   
         <h2>Contacts</h2>
-        <Filter contactFilter={this.contactFilter}/>
-        <ContactList arr={this.filterArray} deleteContact={this.deleteContact}/>
+        <Filter contactFilter={contactFilter}/>
+        <ContactList arr={filterArray} deleteContact={deleteContact}/>
       </div>
     )
   }
