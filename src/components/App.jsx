@@ -18,7 +18,7 @@ export const App = () => {
       ...data,
       id: nanoid(),
     };
-    setContacts([contacts, newContact]);
+    setContacts([...contacts, newContact]);
   };
 
 
