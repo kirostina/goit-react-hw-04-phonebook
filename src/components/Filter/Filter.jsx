@@ -1,16 +1,13 @@
-import { Component} from 'react';
-
-export class Filter extends Component {
-    onChange = evt =>{
-        this.props.contactFilter(evt.target.value);
-    }
-    render(){
-        return(
-            <label>Find contact by name
-            <input 
-            type='text' name='filter' onChange={this.onChange}
-            pattern='^[a-zA-Z]+$'/>
-            </label>
-        )
-    }
-}
+import React from 'react';
+const Filter = ({ filter, onFilterChange }) => {
+  return (
+    <input
+      type="text"
+      name="filter"
+      placeholder="Search your contact"
+      value={filter}
+      onChange={e => onFilterChange(e.target.value)}
+    />
+  );
+};
+export default Filter;
